@@ -1,0 +1,14 @@
+<p>index works!</p>
+<div *ngIf="usersData">
+    <div *ngFor="let user of usersData">
+        <div>Name: {{user.name}}</div>
+        <div>Birth date: {{user.dateOfBirth}}</div>
+        <div *ngIf="user.roles">
+            <div *ngFor="let role of user.roles">
+                <div>Role name: {{role.name}}</div>
+            </div>
+        </div>
+        <div>______</div>
+    </div>
+</div>
+<button (click)="makeCall()">Make call</button>
